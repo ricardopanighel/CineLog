@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CineLog - Detalhes</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <nav>
+        <div class="logo">🎥 CineLog</div>
+        <div><a th:href="@{/lista}">Voltar</a></div>
+    </nav>
+
+    <div class="container">
+        <h1 th:text="${filme.titulo}">Título</h1>
+        
+        <div class="detalhe-card">
+            <p><strong>Gênero:</strong> <span th:text="${filme.genero}"></span></p>
+            <p><strong>Minha Nota:</strong> <span class="nota-badge" th:text="${filme.nota}"></span></p>
+        </div>
+
+        <div class="actions">
+            <button><a th:href="@{/lista}">Ver Todos</a></button>
+        </div>
+    </div>
+</body>
+</html>

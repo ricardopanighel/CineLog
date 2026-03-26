@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLog - Seu Diário de Filmes</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🎥 CineLog</div>
+        <div>
+            <a th:href="@{/}">Início</a>
+            <a th:href="@{/cadastro}">Novo Filme</a>
+            <a th:href="@{/lista}">Meus Filmes</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Bem-vindo ao CineLog</h1>
+        <p>Sua plataforma pessoal para catalogar e avaliar cada filme que passa pela sua tela. 
+           Nunca mais esqueça aquele título incrível ou aquela nota que você deu para um clássico.</p>
+        
+        <div class="features">
+            <div class="feature-item">
+                <h3>📝 Registre</h3>
+                <small>Salve títulos e gêneros.</small>
+            </div>
+            <div class="feature-item">
+                <h3>⭐ Avalie</h3>
+                <small>Dê notas de 1 a 10.</small>
+            </div>
+            <div class="feature-item">
+                <h3>📋 Liste</h3>
+                <small>Veja todo seu histórico.</small>
+            </div>
+        </div>
+
+        <br><br>
+        <button><a th:href="@{/cadastro}">Começar Meu Log</a></button>
+    </div>
+
+</body>
+</html>

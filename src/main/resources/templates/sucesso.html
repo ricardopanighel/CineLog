@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLog - Filme Registrado</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🎥 CineLog</div>
+        <div>
+            <a th:href="@{/}">Início</a>
+            <a th:href="@{/cadastro}">Novo Filme</a>
+            <a th:href="@{/lista}">Meus Filmes</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="icon-check">🍿</div>
+        <h1>Tudo pronto!</h1>
+        <p>O filme foi registrado com sucesso no seu diário cinematográfico.</p>
+        
+        <div class="button-group">
+            <a th:href="@{/lista}" class="btn btn-primary">Ver Minha Lista</a>
+            <a th:href="@{/}" class="btn btn-outline">Voltar ao Início</a>
+        </div>
+    </div>
+
+</body>
+</html>

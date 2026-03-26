@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CineLog - Meus Filmes</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🎥 CineLog</div>
+        <div>
+            <a th:href="@{/}">Início</a>
+            <a th:href="@{/cadastro}">Novo Filme</a>
+            <a th:href="@{/lista}">Meus Filmes</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>🎬 Filmes Assistidos</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Id</th>
+                    <th>Sua Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="f : ${listaFilmes}">
+                    <td>
+                        <a class="link-detalhes" th:href="@{/lista/{id}(id=${f.id})}" th:text="${f.titulo}"></a>
+                    </td>
+                    <td th:text="${f.genero}"></td>
+                    <td th:text="${f.id}"></td>
+                    <td>
+                        <span class="nota-badge" th:text="${f.nota}"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div th:if="${#lists.isEmpty(listaFilmes)}">
+            <p>Nenhum filme cadastrado ainda. Que tal começar agora?</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
