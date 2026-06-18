@@ -171,6 +171,7 @@ form {
 }
 
 label {
+    display: block;
     margin-bottom: 8px;
     color: var(--purple-main);
     font-weight: 600;
@@ -179,6 +180,7 @@ label {
 
 /* Estilo para Inputs de Texto e Número */
 input[type="text"],
+input[type="password"],
 input[type="number"] {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-soft);
@@ -287,6 +289,10 @@ input[type="file"] {
 .auth-subtitle {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.auth-card form {
+    text-align: left;
 }
 
 .btn-full {
