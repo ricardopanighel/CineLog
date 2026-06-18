@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLog - Cadastro</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body class="auth-body">
+    <div class="auth-card">
+        <h1>🎥 CineLog</h1>
+        <p class="auth-subtitle">Crie sua conta</p>
+
+        <div th:if="${erroCadastro}" class="alert alert-error" th:text="${erroCadastro}"></div>
+
+        <form th:action="@{/usuario}" th:object="${usuario}" method="post">
+            <label for="nome">Usuário</label>
+            <input id="nome" type="text" th:field="*{nome}" required>
+
+            <label for="password">Senha</label>
+            <input id="password" type="password" th:field="*{password}" required>
+
+            <button type="submit" class="btn-full">Cadastrar</button>
+        </form>
+
+        <p class="login-hint">
+            Já tem conta? <a th:href="@{/login}" class="auth-link">Entrar</a>
+        </p>
+    </div>
+</body>
+</html>
