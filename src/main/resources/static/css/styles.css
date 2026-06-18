@@ -293,6 +293,28 @@ input[type="file"] {
 
 .auth-card form {
     text-align: left;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.auth-card form label {
+    margin-top: 14px;
+}
+
+.auth-card form label:first-of-type {
+    margin-top: 0;
+}
+
+.auth-card form input[type="text"],
+.auth-card form input[type="password"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.auth-card form button[type="submit"] {
+    margin-top: 22px;
 }
 
 .btn-full {
