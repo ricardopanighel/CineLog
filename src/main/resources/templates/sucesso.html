@@ -14,6 +14,9 @@
             <a th:href="@{/}">Início</a>
             <a th:href="@{/cadastro}">Novo Filme</a>
             <a th:href="@{/lista}">Meus Filmes</a>
+            <form th:action="@{/logout}" method="post" class="logout-form">
+                <button type="submit" class="link-button">Sair</button>
+            </form>
         </div>
     </nav>
 

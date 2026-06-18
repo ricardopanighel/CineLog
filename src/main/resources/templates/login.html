@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLog - Login</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body class="auth-body">
+    <div class="auth-card">
+        <h1>🎥 CineLog</h1>
+        <p class="auth-subtitle">Acesse seu diário de filmes</p>
+
+        <div th:if="${errorMsg}" class="alert alert-error" th:text="${errorMsg}"></div>
+        <div th:if="${logoutMsg}" class="alert alert-ok" th:text="${logoutMsg}"></div>
+
+        <form th:action="@{/login}" method="post">
+            <label for="username">Usuário</label>
+            <input id="username" type="text" name="username" required autofocus>
+
+            <label for="password">Senha</label>
+            <input id="password" type="password" name="password" required>
+
+            <button type="submit" class="btn-full">Entrar</button>
+        </form>
+
+        <p class="login-hint">Credenciais padrão: <strong>admin</strong> / <strong>admin123</strong></p>
+    </div>
+</body>
+</html>

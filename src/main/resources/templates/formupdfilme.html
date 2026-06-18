@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineLog - Cadastrar Filme</title>
+    <title>CineLog - Editar Filme</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
@@ -21,20 +21,19 @@
     </nav>
 
     <div class="container">
-        <h1>Registrar Filme</h1>
+        <h1>Editar Filme</h1>
 
         <div th:if="${erroUpload}" class="alert alert-error" th:text="${erroUpload}"></div>
 
-        <form th:action="@{/filme}" th:object="${filme}" method="post" enctype="multipart/form-data">
-            
+        <form th:action="@{/filme/{id}/editar(id=${id})}" th:object="${filme}" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Título do Filme:</label>
-                <input type="text" th:field="*{titulo}" placeholder="Ex: Batman" required>
+                <input type="text" th:field="*{titulo}" required>
             </div>
 
             <div class="form-group">
                 <label>Gênero:</label>
-                <input type="text" th:field="*{genero}" placeholder="Ex: Ação, Drama..." required>
+                <input type="text" th:field="*{genero}" required>
             </div>
 
             <div class="form-group">
@@ -43,12 +42,17 @@
             </div>
 
             <div class="form-group">
-                <label>Capa do Filme:</label>
+                <label>Trocar Capa:</label>
                 <input type="file" name="imagem" accept="image/*">
-                <small class="form-help">Upload enviado para o bucket configurado.</small>
+                <small class="form-help">Se enviar nova imagem, a anterior será substituída.</small>
             </div>
 
-            <input type="submit" value="Salvar no Diário">
+            <div class="preview-area" th:if="${filme.imagemUrl != null}">
+                <p>Capa atual</p>
+                <img th:src="${filme.imagemUrl}" alt="Capa atual do filme" class="poster-img">
+            </div>
+
+            <input type="submit" value="Salvar Alterações">
         </form>
     </div>
 

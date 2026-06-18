@@ -8,7 +8,12 @@
 <body>
     <nav>
         <div class="logo">🎥 CineLog</div>
-        <div><a th:href="@{/lista}">Voltar</a></div>
+        <div>
+            <a th:href="@{/lista}">Voltar</a>
+            <form th:action="@{/logout}" method="post" class="logout-form">
+                <button type="submit" class="link-button">Sair</button>
+            </form>
+        </div>
     </nav>
 
     <div class="container">
@@ -17,9 +22,17 @@
         <div class="detalhe-card">
             <p><strong>Gênero:</strong> <span th:text="${filme.genero}"></span></p>
             <p><strong>Minha Nota:</strong> <span class="nota-badge" th:text="${filme.nota}"></span></p>
+            <div class="preview-area" th:if="${filme.imagemUrl != null}">
+                <p><strong>Capa:</strong></p>
+                <img th:src="${filme.imagemUrl}" alt="Capa do filme" class="poster-img">
+            </div>
         </div>
 
         <div class="actions">
+            <a class="btn btn-primary" th:href="@{/filme/{id}/editar(id=${filme.id})}">Editar Filme</a>
+            <form th:action="@{/filme/{id}/deletar(id=${filme.id})}" method="post" class="inline-form">
+                <button type="submit" class="btn btn-danger">Excluir Filme</button>
+            </form>
             <button><a th:href="@{/lista}">Ver Todos</a></button>
         </div>
     </div>

@@ -224,3 +224,231 @@ input[type="submit"]:hover {
     color: #555;
     font-size: 0.9rem;
 }
+
+input[type="file"] {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-soft);
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text-light);
+}
+
+.form-help {
+    color: var(--text-dim);
+    margin-top: 6px;
+    font-size: 0.85rem;
+}
+
+.alert {
+    margin: 12px auto 20px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 520px;
+    text-align: left;
+}
+
+.alert-error {
+    background: rgba(220, 38, 38, 0.15);
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    color: #fca5a5;
+}
+
+.alert-ok {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #86efac;
+}
+
+.auth-body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1f1131 0%, #09090b 60%);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card-dark);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.auth-card h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.login-hint {
+    margin-top: 16px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.logout-form {
+    display: inline;
+    margin-left: 16px;
+}
+
+.link-button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.link-button:hover {
+    color: var(--purple-main);
+    box-shadow: none;
+    transform: none;
+    background: transparent;
+}
+
+.muted {
+    color: var(--text-dim);
+}
+
+.poster-thumb {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-soft);
+}
+
+.poster-img {
+    width: 220px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+}
+
+.preview-area {
+    margin-top: 20px;
+}
+
+.detalhe-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.action-cell {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.inline-form {
+    margin: 0;
+    display: inline;
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: var(--purple-main);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.btn-small:hover {
+    background-color: var(--purple-hover);
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #b91c1c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #991b1b;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--purple-main);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--purple-hover);
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--purple-main);
+    border: 1px solid var(--purple-main);
+}
+
+.btn-outline:hover {
+    background: rgba(155, 89, 182, 0.12);
+    text-decoration: none;
+}
+
+.actions {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button-group {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nota-badge {
+    display: inline-block;
+    min-width: 28px;
+    text-align: center;
+    background: rgba(155, 89, 182, 0.2);
+    color: #d8b4fe;
+    border: 1px solid rgba(155, 89, 182, 0.45);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-weight: 700;
+}
+
+.icon-check {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}

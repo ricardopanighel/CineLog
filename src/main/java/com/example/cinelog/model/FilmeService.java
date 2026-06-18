@@ -15,12 +15,20 @@ public class FilmeService {
         fDao.inserirFilme(cli);
     }
 
-    public Filme mostrarFilme(String id){
+    public Filme mostrarFilme(String id) {
         return fDao.mostrarFilme(id);
     }
 
     public List<Filme> listarTodos() {
         return fDao.listarFilmes();
+    }
+
+    public void atualizarFilme(Filme filme, String id) {
+        fDao.atualizarFilme(filme, id);
+    }
+
+    public void deletarFilme(String id) {
+        fDao.deletarFilme(id);
     }
 
 }

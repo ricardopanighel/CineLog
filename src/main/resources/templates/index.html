@@ -14,6 +14,9 @@
             <a th:href="@{/}">Início</a>
             <a th:href="@{/cadastro}">Novo Filme</a>
             <a th:href="@{/lista}">Meus Filmes</a>
+            <form th:action="@{/logout}" method="post" class="logout-form">
+                <button type="submit" class="link-button">Sair</button>
+            </form>
         </div>
     </nav>
 
@@ -34,6 +37,10 @@
             <div class="feature-item">
                 <h3>📋 Liste</h3>
                 <small>Veja todo seu histórico.</small>
+            </div>
+            <div class="feature-item">
+                <h3>🖼️ Bucket</h3>
+                <small>Envie capa dos filmes por upload.</small>
             </div>
         </div>
 

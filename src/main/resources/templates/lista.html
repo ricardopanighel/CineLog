@@ -15,6 +15,9 @@
             <a th:href="@{/}">Início</a>
             <a th:href="@{/cadastro}">Novo Filme</a>
             <a th:href="@{/lista}">Meus Filmes</a>
+            <form th:action="@{/logout}" method="post" class="logout-form">
+                <button type="submit" class="link-button">Sair</button>
+            </form>
         </div>
     </nav>
 
@@ -26,8 +29,9 @@
                 <tr>
                     <th>Título</th>
                     <th>Gênero</th>
-                    <th>Id</th>
                     <th>Sua Nota</th>
+                    <th>Capa</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,9 +40,18 @@
                         <a class="link-detalhes" th:href="@{/lista/{id}(id=${f.id})}" th:text="${f.titulo}"></a>
                     </td>
                     <td th:text="${f.genero}"></td>
-                    <td th:text="${f.id}"></td>
                     <td>
                         <span class="nota-badge" th:text="${f.nota}"></span>
+                    </td>
+                    <td>
+                        <img th:if="${f.imagemUrl != null}" th:src="${f.imagemUrl}" class="poster-thumb" alt="Capa do filme">
+                        <span th:if="${f.imagemUrl == null}" class="muted">Sem capa</span>
+                    </td>
+                    <td class="action-cell">
+                        <a class="btn-small" th:href="@{/filme/{id}/editar(id=${f.id})}">Editar</a>
+                        <form th:action="@{/filme/{id}/deletar(id=${f.id})}" method="post" class="inline-form">
+                            <button type="submit" class="btn-small btn-danger">Excluir</button>
+                        </form>
                     </td>
                 </tr>
             </tbody>

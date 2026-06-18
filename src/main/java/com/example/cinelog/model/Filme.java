@@ -7,21 +7,27 @@ public class Filme {
     private String titulo;
     private String genero;
     private int nota;
+    private String imagemUrl;
+    private String imagemKey;
 
     public Filme() {
     }
 
-    public Filme(String titulo, String genero, int nota) {
+    public Filme(String titulo, String genero, int nota, String imagemUrl, String imagemKey) {
         this.titulo = titulo;
         this.genero = genero;
         this.nota = nota;
+        this.imagemUrl = imagemUrl;
+        this.imagemKey = imagemKey;
     }
 
-    public Filme(String id, String titulo, String genero, int nota) {
+    public Filme(String id, String titulo, String genero, int nota, String imagemUrl, String imagemKey) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.nota = nota;
+        this.imagemUrl = imagemUrl;
+        this.imagemKey = imagemKey;
     }
 
     // Getters e Setters
@@ -56,5 +62,21 @@ public class Filme {
 
     public void setNota(int nota) {
         this.nota = nota;
+    }
+
+    public String getImagemUrl() {
+        return imagemUrl;
+    }
+
+    public void setImagemUrl(String imagemUrl) {
+        this.imagemUrl = imagemUrl;
+    }
+
+    public String getImagemKey() {
+        return imagemKey;
+    }
+
+    public void setImagemKey(String imagemKey) {
+        this.imagemKey = imagemKey;
     }
 }
